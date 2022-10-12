@@ -1,5 +1,6 @@
 import tkinter
 import tkinter.messagebox
+from turtle import color
 
 '''
 Design a creative UI using Python's tkinter module to calculate the total cost of a pizza.
@@ -40,7 +41,6 @@ class PizzaCost:
         self.main_window.geometry('500x300')
         self.main_window.title('Pizza Cost Calculator')
 
-
         '''
         Create Frames (will need 13)
         '''
@@ -77,7 +77,8 @@ class PizzaCost:
         '''
         Crust (Label & Radio Boxes)
         '''
-        self.labelCrust = tkinter.Label(self.frame1, text= 'Select your crust')
+        self.labelCrust = tkinter.Label(self.frame1, text= 'select your crust', fg='MediumSlateBlue',font=('Helvetica',15,'bold'))
+        
         
         self.labelCrust.pack()
 
@@ -97,7 +98,7 @@ class PizzaCost:
         '''
         Toppings (Label & Check Boxes)
         '''
-        self.labelToppings = tkinter.Label(self.frame6, text='select your toppings')
+        self.labelToppings = tkinter.Label(self.frame6, text='select your toppings', fg='MediumSlateBlue',font=('Helvetica',15,'bold'))
 
         self.labelToppings.pack()
 
@@ -136,7 +137,7 @@ class PizzaCost:
         '''
         Customer's Name
         '''
-        self.labelName = tkinter.Label(self.frame12, text='Enter your Name')
+        self.labelName = tkinter.Label(self.frame12, text='enter your name',fg='MediumSlateBlue',font=('Helvetica',15,'bold'))
 
         self.NameEntry = tkinter.Entry(self.frame12, width=10)
 
@@ -146,8 +147,8 @@ class PizzaCost:
         '''
         Quit & Calculate Buttons
         '''
-        self.buttonQuit = tkinter.Button(self.main_window, text='Quit', command= self.main_window.destroy)
-        self.buttonCalculate = tkinter.Button(self.main_window, text='Calculate', command=self.do_something)
+        self.buttonQuit = tkinter.Button(self.main_window, text='Quit', fg='red', command= self.main_window.destroy)
+        self.buttonCalculate = tkinter.Button(self.main_window, text='Calculate', fg='green', command=self.do_something)
 
         #Pack Buttons 
         self.buttonQuit.pack(side='left')
